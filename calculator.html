@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Islamic Calculator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: linear-gradient(135deg, #013220, #014421);
+        font-family: 'Amiri', serif;
+        margin: 0;
+      }
+
+      .calculator {
+        background: #fff;
+        padding: 25px;
+        border-radius: 16px;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+        width: 360px;
+        border: 3px solid #d4a017;
+        background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><path d="M50 10 L90 50 L50 90 L10 50 Z" fill="none" stroke="#d4a017" stroke-opacity="0.2" stroke-width="2"/></svg>');
+        background-size: 60px 60px;
+      }
+
+      .greeting {
+        text-align: center;
+        color: #d4a017;
+        font-size: 1.8em;
+        margin-bottom: 10px;
+        font-weight: 700;
+      }
+
+      .display {
+        height: 70px;
+        background: #1a3c34;
+        color: #0f0;
+        font-size: 2em;
+        text-align: right;
+        padding: 15px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        overflow-x: auto;
+        border: 2px solid #d4a017;
+      }
+
+      .buttons {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 12px;
+      }
+
+      .buttons button {
+        padding: 30px;
+        font-size: 1.5em;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        background: #e6e6e6;
+        transition: background 0.2s, transform 0.1s;
+        font-family: 'Amiri', serif;
+      }
+
+      .buttons button:hover {
+        background: #b3c6b5;
+        transform: scale(1.05);
+      }
+
+      .buttons .operator {
+        background: #d4a017;
+        color: #fff;
+      }
+
+      .buttons .equals {
+        background: #1a3c34;
+        color: #fff;
+      }
+
+      .buttons .clear {
+        background: #8b0000;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="calculator">
+      <div class="greeting">السلام عليكم</div>
+      <div class="display" id="display">0</div>
+      <div class="buttons">
+        <button class="clear">C</button>
+        <button class="operator">/</button>
+        <button class="operator">*</button>
+        <button class="operator">-</button>
+        <button>7</button>
+        <button>8</button>
+        <button>9</button>
+        <button class="operator">+</button>
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
+        <button class="equals">=</button>
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>0</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
